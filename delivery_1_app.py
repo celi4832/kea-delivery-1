@@ -7,7 +7,6 @@
 import dash
 from dash import html
 from dash import dcc
-import dash_bootstrap_components as dbc
 
 # Plotly
 import plotly.express as px
@@ -44,21 +43,6 @@ dash_app = dash.Dash(__name__)
 app = dash_app.server
 
 ##### Layout af app #####
-
-topbar = dbc.Navbar(
-    [
-        dbc.Row(
-            [
-                dbc.Col(
-                    dbc.NavbarBrand("Total sales", style = {'color':'black', 'fontSize':'25px','fontFamily':'Times New Roman'}
-                    ),
-                )
-            ],
-            align="center",
-            className="g-10",
-        ),
-    ]
-)
 
 dash_app.layout = html.Div(
     children=[
